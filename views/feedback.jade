@@ -1,0 +1,21 @@
+// Jade file to specify output of an actors list
+// Inherits from layout
+extend layout
+block content
+  p
+    h1 Please indicate on the scale below how many #{studySpace} are occupied
+    //change action to go somewhere different
+  form(method='get', action='/thankyou')
+      input(type="radio", name="25% full", value="0.25")
+      label 25% Full 
+      br
+      input(type="radio", name="50% full", value="0.50")
+      label 50% Full 
+      br 
+      input(type="radio", name="75% full", value="0.75")
+      label 75% Full
+      br
+      input(type="radio", name="100% full", value="1") 
+      label 100% Full 
+      br
+      input(type='submit', value='Submit')

@@ -1,0 +1,10 @@
+// Jade file to specify output of an actors list
+// Inherits from layout
+extend layout
+block content
+  p
+    h1 Thank you!
+    //change action to go somewhere different
+    form(method='get', action='/')
+     br
+     input(type='submit', value='Return to Homepage')

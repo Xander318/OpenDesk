@@ -1,0 +1,27 @@
+
+doctype html
+html
+  head
+    title OpenDesk
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css')
+    script(src='/javascript/jquery-1.11.2.js')
+    script(src='/javascript/jquery-ui-1.11.4.custom/jquery-ui.js')
+    script(src='/javascript/jquery-ui-timepicker-0.3.3/jquery.ui.timepicker.js')
+    script(type='text/javascript').
+       $(function() {
+         $('#datepicker').datepicker({dateFormat: ' yy-mm-dd'});
+         $('#timepicker').timepicker({showPeriod: true});
+       });
+
+  body
+    header
+      img(src='/Desk-icon.png')
+      h1 OpenDesk
+    .container
+      .main-content
+        block content
+      .sidebar
+        block sidebar
+    footer
+         
