@@ -1,7 +1,7 @@
-// Basic Jade specification for querying for an login
+// Basic Jade specification for rendering query forms
 // Inherits from layout 
 extend layout
-// Then we produce a form that triggers /login once
+// Then we produce a form that queries when
 // the user hits Submit
 block content
   p
@@ -9,10 +9,10 @@ block content
     form(method='get', action='/login')
       input(type='text', name='datepicker', id='datepicker')
       input(type='text', name='timepicker', id='timepicker')
+
       select(name='table')
-           option(value='GSR') GSR
-           option(value='COUCH') Couch
-           option(value='IND') Individual Desk
-           option(value='TEAM') Team Desk
-           option(value='COMP') Computer
-           input(type='submit', value='Search')
+           option(value='Couch') Couch
+           option(value='Individual Desk') Individual Desk
+           option(value='Group Table') Group Table
+           option(value='Computer') Computer
+           input(type='submit', id='submit', value='Search')

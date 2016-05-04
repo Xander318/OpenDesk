@@ -1,7 +1,5 @@
 /**
- * Simple Homework 2 application for CIS 550
- * 
- * zives
+ * Base framework for OpenDesk. Handles all HTTP requests by sending to various routes
  */
 
 /**
@@ -10,27 +8,18 @@
 var express = require('express')
   , routes = require('./routes')
   , login = require('./routes/login')
-  , actor = require('./routes/actor')
-  , newsfeed = require('./routes/newsfeed')
-  , user = require('./routes/user')
-  , like = require('./routes/like')
-  , signup = require('./routes/signup')
-  , newsfeed_trips = require('./routes/newsfeed_trips')
   , http = require('http')
   , path = require('path')
   , stylus =  require("stylus")
   , nib =     require("nib")
   , morgan = require("morgan")
   , bodyParser = require("body-parser")
-  , favicon = require("favicon")
   , methodOverride = require("method-override")
   , errorHandler = require("errorhandler")
   , passport = require("passport")
   , session = require('express-session')
-  , search = require('./routes/search')
-  , edit = require('./routes/edit')
-  , submit_edit = require('./routes/submit_edit')
-  , feedback = require('./routes/feedback')
+  , yesFeedback = require('./routes/yesFeedback')
+  , noFeedback = require('./routes/noFeedback')
   , thankyou = require('./routes/thankyou')
 ;
 
@@ -44,15 +33,8 @@ app.get('/', routes.do_work);
 // when we get a request for {app/login} we should call routes/login.js
 app.get('/login', login.do_work);
 app.get('/logout', login.logout);
-app.get('/signup', signup.do_work);
-app.get('/newsfeed', newsfeed.do_work);
-app.get('/newsfeed_trips',newsfeed_trips.do_work);
-app.get('/like', like.do_work);
-app.get('/user/:uid', user.do_work);
-app.get('/search', search.do_work);
-app.get('/edit/:uid', edit.do_work);
-app.get('/submit_edit', submit_edit.do_work);
-app.get('/feedback', feedback.do_work);
+app.get('/yesFeedback', yesFeedback.do_work);
+app.get('/noFeedback', noFeedback.do_work);
 app.get('/thankyou', thankyou.do_work);
 
 // Listen on the port we specify
@@ -78,7 +60,6 @@ function init_app() {
 	app.set('views', __dirname + '/views');
 	app.set('view engine', 'jade');
 
-//	app.use(favicon();
 	// Set the express logger: log to the console in dev mode
 	app.use(morgan("dev"));
 	app.use(bodyParser.urlencoded({
@@ -86,7 +67,6 @@ function init_app() {
 	}));
 	app.use(bodyParser.json());
 	app.use(methodOverride());
-//	app.use(app.router);
 	// Use Stylus, which compiles .styl --> CSS
 	app.use(stylus.middleware(
 	  { src: __dirname + '/public'

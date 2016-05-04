@@ -1,21 +1,44 @@
-// Jade file to specify output of an actors list
+// Form to ask user to input approximate availability
 // Inherits from layout
 extend layout
 block content
   p
-    h1 Please indicate on the scale below how many #{studySpace} are occupied
+    h1 Please indicate on the scale below approximately how many spaces of type #{studySpace} are occupied
     //change action to go somewhere different
   form(method='get', action='/thankyou')
-      input(type="radio", name="25% full", value="0.25")
-      label 25% Full 
+      input(type="hidden", name="studySpace", value=studySpace)
+      input(type="hidden", name="date", value=date)
+      input(type="radio", name="occupancy", value="0.0")
+      | Empty (0% Full)
       br
-      input(type="radio", name="50% full", value="0.50")
-      label 50% Full 
-      br 
-      input(type="radio", name="75% full", value="0.75")
-      label 75% Full
+      input(type="radio", name="occupancy", value="0.1")
+      | 10% Full
       br
-      input(type="radio", name="100% full", value="1") 
-      label 100% Full 
+      input(type="radio", name="occupancy", value="0.2")
+      | 20% Full
+      br
+      input(type="radio", name="occupancy", value="0.3")
+      | 30% Full
+      br
+      input(type="radio", name="occupancy", value="0.4")
+      | 40% Full
+      br
+      input(type="radio", name="occupancy", value="0.5")
+      | 50% Full
+      br
+      input(type="radio", name="occupancy", value="0.6")
+      | 60% Full
+      br
+      input(type="radio", name="occupancy", value="0.7")
+      | 70% Full
+      br
+      input(type="radio", name="occupancy", value="0.8")
+      | 80% Full
+      br
+      input(type="radio", name="occupancy", value="0.9")
+      | 90% Full
+      br
+      input(type="radio", name="occupancy", value="1") 
+      | 100% Full 
       br
       input(type='submit', value='Submit')

@@ -1,19 +1,32 @@
-
+// Base layout for all Jade files.
+// Links to all necessary CSS sheets and dynamic JS scripts.
 doctype html
 html
   head
     title OpenDesk
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css')
+    link(rel='stylesheet', href='/javascript/jquery-timepicker-master/jquery.timepicker.css')
     script(src='/javascript/jquery-1.11.2.js')
     script(src='/javascript/jquery-ui-1.11.4.custom/jquery-ui.js')
-    script(src='/javascript/jquery-ui-timepicker-0.3.3/jquery.ui.timepicker.js')
+    script(src='/javascript/jquery-timepicker-master/jquery.timepicker.js')
     script(type='text/javascript').
-       $(function() {
-         $('#datepicker').datepicker({dateFormat: ' yy-mm-dd'});
-         $('#timepicker').timepicker({showPeriod: true});
-       });
-
+      $(function() {
+        $('#datepicker').datepicker({
+            dateFormat: ' yy-mm-dd',
+            onSelect: function(dateText, inst) {
+                var date = $('#datepicker').datepicker('getDate').getUTCDay();
+                $('#date').val((date+6)%7);
+                console.log('#date');
+            }
+        });
+        $('#timepicker').timepicker({
+            minTime: 'now',
+            orientation: 'rb',
+            scrollDefault: 'now',
+         });
+      });
+    
   body
     header
       img(src='/Desk-icon.png')
@@ -24,4 +37,4 @@ html
       .sidebar
         block sidebar
     footer
-         
+    block scripts

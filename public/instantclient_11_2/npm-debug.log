@@ -1,0 +1,196 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'oracle' ]
+2 info using npm@1.2.14
+3 info using node@v0.10.0
+4 verbose read json /home/ec2-user/OpenDesk/package.json
+5 verbose read json /home/ec2-user/OpenDesk/node_modules/express/package.json
+6 verbose from cache /home/ec2-user/OpenDesk/package.json
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'oracle', null ]
+9 verbose cache add name=undefined spec="oracle" args=["oracle",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'oracle',
+10 verbose parsed url   path: 'oracle',
+10 verbose parsed url   href: 'oracle' }
+11 silly lockFile 431364b6-oracle oracle
+12 verbose lock oracle /home/ec2-user/.npm/431364b6-oracle.lock
+13 silly lockFile 431364b6-oracle oracle
+14 silly lockFile 431364b6-oracle oracle
+15 verbose addNamed [ 'oracle', '' ]
+16 verbose addNamed [ null, '' ]
+17 silly lockFile a4fb3172-oracle oracle@
+18 verbose lock oracle@ /home/ec2-user/.npm/a4fb3172-oracle.lock
+19 silly addNameRange { name: 'oracle', range: '', hasData: false }
+20 verbose url raw oracle
+21 verbose url resolving [ 'https://registry.npmjs.org/', './oracle' ]
+22 verbose url resolved https://registry.npmjs.org/oracle
+23 info trying registry request attempt 1 at 14:45:47
+24 verbose etag "CJKT3DVI70N85R86RW1TL3BNK"
+25 http GET https://registry.npmjs.org/oracle
+26 http 304 https://registry.npmjs.org/oracle
+27 silly registry.get cb [ 304,
+27 silly registry.get   { date: 'Tue, 14 Apr 2015 14:45:47 GMT',
+27 silly registry.get     server: 'Apache',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'last-modified': 'Tue, 14 Apr 2015 14:45:48 GMT',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     etag: '"CJKT3DVI70N85R86RW1TL3BNK"',
+27 silly registry.get     age: '0',
+27 silly registry.get     'x-served-by': 'cache-jfk1031-JFK',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1429022747.983704,VS0,VE31',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'content-length': '0',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 verbose etag oracle from cache
+29 silly addNameRange number 2 { name: 'oracle', range: '', hasData: true }
+30 silly addNameRange versions [ 'oracle',
+30 silly addNameRange   [ '0.1.0',
+30 silly addNameRange     '0.1.1',
+30 silly addNameRange     '0.1.2',
+30 silly addNameRange     '0.1.3',
+30 silly addNameRange     '0.2.0',
+30 silly addNameRange     '0.3.0',
+30 silly addNameRange     '0.3.1',
+30 silly addNameRange     '0.3.2',
+30 silly addNameRange     '0.3.3',
+30 silly addNameRange     '0.3.4',
+30 silly addNameRange     '0.3.5',
+30 silly addNameRange     '0.3.6',
+30 silly addNameRange     '0.3.7',
+30 silly addNameRange     '0.3.8' ] ]
+31 verbose addNamed [ 'oracle', '0.3.8' ]
+32 verbose addNamed [ '0.3.8', '0.3.8' ]
+33 silly lockFile 6190ec55-oracle-0-3-8 oracle@0.3.8
+34 verbose lock oracle@0.3.8 /home/ec2-user/.npm/6190ec55-oracle-0-3-8.lock
+35 verbose read json /home/ec2-user/.npm/oracle/0.3.8/package/package.json
+36 silly lockFile 6190ec55-oracle-0-3-8 oracle@0.3.8
+37 silly lockFile 6190ec55-oracle-0-3-8 oracle@0.3.8
+38 silly lockFile a4fb3172-oracle oracle@
+39 silly lockFile a4fb3172-oracle oracle@
+40 silly resolved [ { name: 'oracle',
+40 silly resolved     description: 'Oracle database driver',
+40 silly resolved     keywords: [ 'database', 'db', 'oracle' ],
+40 silly resolved     homepage: 'https://github.com/joeferner/node-oracle',
+40 silly resolved     license: 'MIT',
+40 silly resolved     version: '0.3.8',
+40 silly resolved     engines: { node: '>=0.6.0' },
+40 silly resolved     maintainers: [ [Object], [Object], [Object] ],
+40 silly resolved     bugs: { url: 'https://github.com/joeferner/node-oracle/issues' },
+40 silly resolved     repository:
+40 silly resolved      { type: 'git',
+40 silly resolved        url: 'git://github.com/joeferner/node-oracle.git' },
+40 silly resolved     dependencies: {},
+40 silly resolved     devDependencies: { nodeunit: '~>0.8.0' },
+40 silly resolved     scripts:
+40 silly resolved      { test: 'nodeunit test/integration.js test/outparams.js',
+40 silly resolved        install: 'node-gyp rebuild' },
+40 silly resolved     main: './index.js',
+40 silly resolved     gypfile: true,
+40 silly resolved     readme: '# This library is not maintained. Oracle has made there own [driver](https://github.com/oracle/node-oracledb).\n\n# Oracle driver for Node.js\n\nA driver to connect to an Oracle database from node.js, leveraging the "Oracle C++ Call Interface" (OCCI)\nfor connectivity.  This is most commonly obtained as part of the Oracle Instant Client.\n\nIt is known to work with Oracle 10, 11, and 12, and has been mostly tested on Linux, but should also work on OS X and\nWindows 7+\n\n\n# Basic installation\n\n(See INSTALL.md for complete instructions for your platform.)\n\n* Prerequisites:\n  * Python 2.7 (*not* v3.x), used by node-gyp\n  * C++ Compiler toolchain (GCC, Visual Studio or similar)\n* Download the latest Oracle Instant Client Basic and SDK, and extract to the same directory.\n* Set environment variables:\n\n\t```\nOCI_LIB_DIR=/path/to/instant_client\nOCI_INCLUDE_DIR=/path/to/instant_client/sdk/include\nOCI_VERSION=<10, 11, or 12> # Integer. Optional, defaults to \'11\'\nNLS_LANG=.UTF8 # Optional, but required to support international characters\n\t```\n* Create symlinks for libclntsh and libocci in the Instant Client directory (see INSTALL.md)\n* (Linux) Install libaio\n* Configure the dynamic library path on your platform to include $OCI_LIB_DIR (see INSTALL.md)\n* `npm install oracle` to get the latest from npmjs.org\n\n\n# Examples\n\n### Basic example\n\n```javascript\nvar oracle = require(\'oracle\');\n\nvar connectData = {\n\thostname: "localhost",\n\tport: 1521,\n\tdatabase: "xe", // System ID (SID)\n\tuser: "oracle",\n\tpassword: "oracle"\n}\n\noracle.connect(connectData, function(err, connection) {\n\tif (err) { console.log("Error connecting to db:", err); return; }\n\n\tconnection.execute("SELECT systimestamp FROM dual", [], function(err, results) {\n\t\tif (err) { console.log("Error executing query:", err); return; }\n\n\t\tconsole.log(results);\n\t\tconnection.close(); // call only when query is finished executing\n\t});\n});\n```\n\n### Alternative connection using TNS\nReplace the `connectData` object above with one of the following.\n\nWithout tnsnames.ora file:\n\n```javascript\nvar connString = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))";\nvar connectData = { "tns": connString, "user": "test", "password": "test" };\n```\nWith tnsnames.ora file:\n\n```text\nDEV =\n\t(DESCRIPTION =\n\t\t(ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))\n\t\t(CONNECT_DATA =\n\t\t\t(SERVER = DEDICATED)\n\t\t\t(SERVICE_NAME = orcl)\n\t\t)\n\t)\n```\n\n```javascript\nvar connectData = { "tns": "DEV", "user": "test", "password": "test" };\n```\n\n### Connection options\n\nThe following options can be set on the connection:\n\n* `connection.setAutoCommit(true/false);`\n* `connection.setPrefetchRowCount(count);` Should improve performance with large result sets\n\n### Out Params\nFollowing the basic example above, a query using a return parameter looks like this:\n\n```javascript\n\t...\n\tconnection.execute(\n\t\t"INSERT INTO person (name) VALUES (:1) RETURNING id INTO :2",\n\t\t[\'joe ferner\', new oracle.OutParam()],\n\t\tfunction(err, results) {\n\t\t\tif ( err ) { ... } \n\t\t\t// results.updateCount = 1\n\t\t\t// results.returnParam = the id of the person just inserted\n\t\t\tconnection.close();\n\t\t}\n\t);\n\t...\n```\n\nThe following OUT Params are supported in Stored Procedures:\n\n* `OCCIINT`\n* `OCCISTRING`\n* `OCCIDOUBLE`\n* `OCCIFLOAT`\n* `OCCICURSOR`\n* `OCCICLOB`\n* `OCCIDATE`\n* `OCCITIMESTAMP`\n* `OCCINUMBER`\n* `OCCIBLOB`\n\nSpecify the return type in the OutParam() constructor:\n\n```javascript\nconnection.execute("call myProc(:1,:2)", ["nodejs", new oracle.OutParam(oracle.OCCISTRING)], ...\n```\n\nWhen using `OCCISTRING`, the size can optionally be specified (default is 200 chars):\n\n```javascript\nconnection.execute("call myProc(:1,:2)", ["nodejs", new oracle.OutParam(oracle.OCCISTRING, {size: 1000})], ...\n```\nSee tests for more examples.\n\n### In/Out Params\nThe following INOUT param types are supported:\n\n* `OCCIINT`\n* `OCCISTRING`\n* `OCCIDOUBLE`\n* `OCCIFLOAT`\n* `OCCINUMBER`\n\nINOUT params are used like normal OUT params, with the optional \'in\' paramater value being passed in the options object:\n\n```javascript\nconnection.execute("call myProc(:1)", [new oracle.OutParam(oracle.OCCIINT, {in: 42})], ...\n```\n\n### Validate connection\nTo validate whether the connection is still established after some time:\n\n```javascript\nif (!connection.isConnected()) {\n\t// Do something like retire this connection from a pool\n}\n```\n\n### Dates\nFor DATE and TIMESTAMP types, the driver uses the UTC methods from the Javascript Date object. This means the DATE\nvalue stored will match the value of `new Date().toISOString()` on your client machine.  Consider this example\nfor a client machine in "GMT-0700":\n\nTable schema:\n\n```sql\nCREATE TABLE date_test (mydate DATE)\n```\n\nJavascript code:\n\n```javascript\n...\n\tvar date = new Date(2013, 11, 24, 18, 0, 1);  // Client timezone dependent\n\tconsole.log(date.toString());      // Tue Dec 24 2013 18:00:01 GMT-0700 (MST)\n\tconsole.log(date.toISOString());   // 2013-12-25T01:00:01.000Z\n\n\tconnection.execute(\n\t\t"INSERT INTO date_test (mydate) VALUES (:1) " +\n\t\t\t"RETURNING mydate, to_char(mydate, \'YYYY-MM-DD HH24:MI:SS\') INTO :2, :3",\n\t\t[date, new oracle.OutParam(oracle.OCCIDATE), new oracle.OutParam(oracle.OCCISTRING)],\n\t\tfunction(err, results) {\n\t\t\tconsole.log(results.returnParam.toString());  // Tue Dec 24 2013 18:00:01 GMT-0700 (MST)\n\t\t\tconsole.log(results.returnParam1);            // 2013-12-25 01:00:01\n\t\t}\n\t);\n...\n```\n\n### Querying large tables\n\nTo query large tables you should use a _reader_:\n\n* `reader = connection.reader(sql, args)`: creates a reader\n* `reader.nextRow(callback)`: returns the next row through the callback\n* `reader.nextRows(count, callback)` returns the next `count` rows through the callback. `count` is optional and `nextRows` uses the prefetch row count when `count` is omitted.  Also, you much check for `row.length` since the reader will continue returning empty arrays once it exceeds the end of the data set provided by the query.\n* `connection.setPrefetchRowCount(count)`: configures the prefetch row count for the connection. Prefetching can have a dramatic impact on performance but uses more memory. \n\nExample:\n\n```javascript\nconnection.setPrefetchRowCount(50);\nvar reader = connection.reader("SELECT * FROM auditlogs", []);\n\nfunction doRead(cb) {\n\treader.nextRow(function(err, row) {\n\t\tif (err) return cb(err);\n\t\tif (row) {\n\t\t\t// do something with row\n\t\t\tconsole.log("got " + JSON.stringify(row));\n\t\t\t// recurse to read next record\n\t\t\treturn doRead(cb)\n\t\t} else {\n\t\t\t// we are done\n\t\t\treturn cb();\n\t\t}\n\t})\n}\n\ndoRead(function(err) {\n\tif (err) throw err; // or log it\n\tconsole.log("all records processed");\n});\n```\n\n### Large inserts or updates\n\nTo insert or update a large number of records you should use _prepared statements_ rather than individual `execute` calls on the connection object:\n\n* `statement = connection.prepare(sql)`: creates a prepared statement.\n* `statement.execute(args, callback)`: executes the prepared statement with the values in `args`. You can call this repeatedly on the same `statement`.\n\nExample:\n\n```javascript\n\nfunction doInsert(stmt, records, cb) {\n\tif (records.length > 0) {\n\t\tstmt.execute([records.shift()], function(err, count) {\n\t\t\tif (err) return cb(err);\n\t\t\tif (count !== 1) return cb(new Error("bad count: " + count));\n\t\t\t// recurse with remaining records\n\t\t\tdoInsert(stmt, records, cb);\n\t\t});\n\t} else {\n\t\t// we are done\n\t\treturn cb();\n\t}\n}\n\nvar statement = connection.prepare("INSERT INTO users (id, firstName, lastName) VALUES (:1, :2, :3)");\ndoInsert(statement, users, function(err) {\n\tif (err) throw err; // or log it\n\tconsole.log("all records inserted");\t\n});\n```\n\n# Limitations/Caveats\n\n* Ensure you always close your connection at the end of use to avoid random false oracle errors.\n* Currently no native support for connection pooling (forthcoming; use generic-pool for now.)\n* Currently no support for column type "Timestamp With Timezone" (Issue #67)\n* While the Oracle TIMESTAMP type provides fractional seconds up to 9 digits (nanoseconds), this will be rounded\n  to the nearest millisecond when converted to a Javascript date (a _data loss_).\n\n# Development\n* Clone the source repo\n* Follow the installation instructions to prepare your environment (using Oracle Instant Client)\n* Run `npm install` or `npm test` in the root of the source directory\n* Point to an Oracle instance of your choice.  The free Oracle Express edition works well:\n  * Oracle Express 11g: http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.htmlDownload\n* Debugging:\n  * Compile node with debug symbols\n  * Use gdb/ddd or another C++ debugger to step through\n',
+40 silly resolved     readmeFilename: 'README.md',
+40 silly resolved     _id: 'oracle@0.3.8',
+40 silly resolved     _from: 'oracle@' } ]
+41 info install oracle@0.3.8 into /home/ec2-user/OpenDesk
+42 info installOne oracle@0.3.8
+43 verbose from cache /home/ec2-user/.npm/oracle/0.3.8/package/package.json
+44 info /home/ec2-user/OpenDesk/node_modules/oracle unbuild
+45 verbose read json /home/ec2-user/OpenDesk/node_modules/oracle/package.json
+46 verbose tar unpack /home/ec2-user/.npm/oracle/0.3.8/package.tgz
+47 silly lockFile 247d7761-ser-OpenDesk-node-modules-oracle /home/ec2-user/OpenDesk/node_modules/oracle
+48 verbose lock /home/ec2-user/OpenDesk/node_modules/oracle /home/ec2-user/.npm/247d7761-ser-OpenDesk-node-modules-oracle.lock
+49 silly lockFile 998e5330-ser-npm-oracle-0-3-8-package-tgz /home/ec2-user/.npm/oracle/0.3.8/package.tgz
+50 verbose lock /home/ec2-user/.npm/oracle/0.3.8/package.tgz /home/ec2-user/.npm/998e5330-ser-npm-oracle-0-3-8-package-tgz.lock
+51 silly gunzTarPerm modes [ '755', '644' ]
+52 silly gunzTarPerm extractEntry package.json
+53 silly gunzTarPerm extractEntry .npmignore
+54 silly gunzTarPerm extractEntry README.md
+55 silly gunzTarPerm extractEntry LICENSE
+56 silly gunzTarPerm extractEntry index.js
+57 silly gunzTarPerm extractEntry INSTALL.md
+58 silly gunzTarPerm extractEntry lib/oracle.js
+59 silly gunzTarPerm extractEntry binding.gyp
+60 silly gunzTarPerm extractEntry src/outParam.h
+61 silly gunzTarPerm extractEntry src/commitBaton.h
+62 silly gunzTarPerm extractEntry src/connection.h
+63 silly gunzTarPerm extractEntry src/executeBaton.cpp
+64 silly gunzTarPerm extractEntry src/executeBaton.h
+65 silly gunzTarPerm extractEntry src/nodeOracleException.h
+66 silly gunzTarPerm extractEntry src/oracle_bindings.cpp
+67 silly gunzTarPerm extractEntry src/oracle_bindings.h
+68 silly gunzTarPerm extractEntry src/outParam.cpp
+69 silly gunzTarPerm extractEntry src/connection.cpp
+70 silly gunzTarPerm extractEntry src/reader.cpp
+71 silly gunzTarPerm extractEntry src/reader.h
+72 silly gunzTarPerm extractEntry src/readerBaton.h
+73 silly gunzTarPerm extractEntry src/rollbackBaton.h
+74 silly gunzTarPerm extractEntry src/statement.cpp
+75 silly gunzTarPerm extractEntry src/statement.h
+76 silly gunzTarPerm extractEntry src/statementBaton.h
+77 silly gunzTarPerm extractEntry src/utils.h
+78 silly gunzTarPerm extractEntry test/assocArrays.js
+79 silly gunzTarPerm extractEntry test/integration.js
+80 silly gunzTarPerm extractEntry test/outparams.js
+81 silly gunzTarPerm extractEntry test/prepare.js
+82 silly gunzTarPerm extractEntry test/reader.js
+83 silly gunzTarPerm extractEntry tests-settings.json
+84 verbose read json /home/ec2-user/OpenDesk/node_modules/oracle/package.json
+85 silly lockFile 247d7761-ser-OpenDesk-node-modules-oracle /home/ec2-user/OpenDesk/node_modules/oracle
+86 silly lockFile 247d7761-ser-OpenDesk-node-modules-oracle /home/ec2-user/OpenDesk/node_modules/oracle
+87 silly lockFile 998e5330-ser-npm-oracle-0-3-8-package-tgz /home/ec2-user/.npm/oracle/0.3.8/package.tgz
+88 silly lockFile 998e5330-ser-npm-oracle-0-3-8-package-tgz /home/ec2-user/.npm/oracle/0.3.8/package.tgz
+89 info preinstall oracle@0.3.8
+90 verbose from cache /home/ec2-user/OpenDesk/node_modules/oracle/package.json
+91 verbose readDependencies using package.json deps
+92 verbose from cache /home/ec2-user/OpenDesk/node_modules/oracle/package.json
+93 verbose readDependencies using package.json deps
+94 silly resolved []
+95 verbose about to build /home/ec2-user/OpenDesk/node_modules/oracle
+96 info build /home/ec2-user/OpenDesk/node_modules/oracle
+97 verbose from cache /home/ec2-user/OpenDesk/node_modules/oracle/package.json
+98 verbose linkStuff [ false, false, false, '/home/ec2-user/OpenDesk/node_modules' ]
+99 info linkStuff oracle@0.3.8
+100 verbose linkBins oracle@0.3.8
+101 verbose linkMans oracle@0.3.8
+102 verbose rebuildBundles oracle@0.3.8
+103 info install oracle@0.3.8
+104 verbose unsafe-perm in lifecycle true
+105 silly exec sh "-c" "node-gyp rebuild"
+106 silly sh,-c,node-gyp rebuild,/home/ec2-user/OpenDesk/node_modules/oracle spawning
+107 info oracle@0.3.8 Failed to exec install script
+108 info /home/ec2-user/OpenDesk/node_modules/oracle unbuild
+109 verbose from cache /home/ec2-user/OpenDesk/node_modules/oracle/package.json
+110 info preuninstall oracle@0.3.8
+111 info uninstall oracle@0.3.8
+112 verbose true,/home/ec2-user/OpenDesk/node_modules,/home/ec2-user/OpenDesk/node_modules unbuild oracle@0.3.8
+113 info postuninstall oracle@0.3.8
+114 error oracle@0.3.8 install: `node-gyp rebuild`
+114 error `sh "-c" "node-gyp rebuild"` failed with 1
+115 error Failed at the oracle@0.3.8 install script.
+115 error This is most likely a problem with the oracle package,
+115 error not with npm itself.
+115 error Tell the author that this fails on your system:
+115 error     node-gyp rebuild
+115 error You can get their info via:
+115 error     npm owner ls oracle
+115 error There is likely additional logging output above.
+116 error System Linux 3.14.35-28.38.amzn1.x86_64
+117 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "oracle"
+118 error cwd /home/ec2-user/OpenDesk/public/instantclient_11_2
+119 error node -v v0.10.0
+120 error npm -v 1.2.14
+121 error code ELIFECYCLE
+122 verbose exit [ 1, true ]
